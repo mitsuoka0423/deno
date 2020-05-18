@@ -1,49 +1,38 @@
-# Introduction
+# イントロダクション
 
-Deno is a JavaScript/TypeScript runtime with secure defaults and a great developer experience.
+Denoは、安全なデフォルトを備えたJavaScript/TypeScriptランタイムであり、開発者にとっては素晴らしい経験となるでしょう。
 
-It's built on V8, Rust, and Tokio.
+V8, Rust, Tokioで作られています。
 
-## Feature Highlights
+## 特徴
 
-- Secure by default. No file, network, or environment access (unless explicitly
-  enabled).
-- Supports TypeScript out of the box.
-- Ships a single executable (`deno`).
-- Has built-in utilities like a dependency inspector (`deno info`) and a code
-  formatter (`deno fmt`).
-- Has
-  [a set of reviewed (audited) standard modules](https://github.com/denoland/deno/tree/master/std)
-  that are guaranteed to work with Deno.
-- Scripts can be bundled into a single JavaScript file.
+- デフォルトでは安全です。明示的に許可しない限り、ファイル、ネットワーク、環境へはアクセスできません。
+- TypeScriptをサポートしています。
+- 単一の実行ファイル(`deno`)を持ちます。
+- 依存性インスペクタ(`deno info`)やコードフォーマッター(`deno fmt`)などの組み込みユーティリティを持っています。
+- Denoでの動作が保証された[標準モジュール](https://github.com/denoland/deno/tree/master/std)を持っています。
+- スクリプトは単一のJavaScriptファイルにバンドルすることができます。
 
-## Philosophy
+## Denoの哲学
 
-Deno aims to be a productive and secure scripting environment for the modern
-programmer.
+Denoは、現代のプログラマのための生産的で安全なスクリプトの動作環境を目指しています。
 
-Deno will always be distributed as a single executable. Given a URL to a Deno
-program, it is runnable with nothing more than
-[the ~15 megabyte zipped executable](https://github.com/denoland/deno/releases).
-Deno explicitly takes on the role of both runtime and package manager. It uses a
-standard browser-compatible protocol for loading modules: URLs.
+Denoは、常に単一の実行ファイルとして配布されます。
 
-Among other things, Deno is a great replacement for utility scripts that may
-have been historically written with bash or python.
+DenoプログラムのURLが与えられれば、[15MB以下のzip形式の実行ファイル](https://github.com/denoland/deno/releases)だけで実行可能です。
+Denoはランタイムとパッケージマネージャの両方の役割を明確に担っています。モジュールの読み込みには標準的なブラウザ互換プロトコルを使用します。URLです。
 
-## Goals
+とりわけ、Denoは歴史的にbashやpythonで書かれていたユーティリティスクリプトの代用に最適です。
 
-- Only ship a single executable (`deno`).
-- Provide Secure Defaults
-  - Unless specifically allowed, scripts can't access files, the environment, or
-    the network.
-- Browser compatible: The subset of Deno programs which are written completely
-  in JavaScript and do not use the global `Deno` namespace (or feature test for
-  it), ought to also be able to be run in a modern web browser without change.
-- Provide built-in tooling like unit testing, code formatting, and linting to
-  improve developer experience.
-- Does not leak V8 concepts into user land.
-- Be able to serve HTTP efficiently
+## ゴール
+
+- 単一の実行ファイル(`deno`)を世に出すこと。
+- デフォルトで安全性を提供すること。
+  - 特に許可されていない限り、スクリプトはファイル、環境、ネットワークにアクセスできません。
+- ブラウザとの互換性: JavaScriptで書かれていて、グローバルな名前空間`Deno`を使用していないDenoプログラムのサブセット(またはそのための機能テスト)は、最新のWebブラウザでも変更なく実行できるようにする必要があります。
+- ユニットテスト、コードフォーマット、リントなどの組み込みツールを提供し、開発者の経験を向上させること。
+- V8のコンセプトをユーザーランドに漏らさないこと。
+- 効率的にHTTPを提供できること。
 
 ## Comparison to Node.js
 
