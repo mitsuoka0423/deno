@@ -67,7 +67,7 @@ winapi = "0.3.8"
 fwdansi = "1.1.0"
 
 [target.'cfg(unix)'.dependencies]
-nix = "0.17.0"
+nix = "0.20.2"
 
 [dev-dependencies]
 os_pipe = "0.9.1"
