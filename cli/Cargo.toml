@@ -51,7 +51,7 @@ sourcemap = "5.0.0"
 tempfile = "3.1.0"
 termcolor = "1.1.0"
 tokio = { version = "0.2.20", features = ["rt-core", "tcp", "udp", "uds", "process", "fs", "blocking", "sync", "io-std", "macros", "time"] }
-tokio-rustls = "0.13.0"
+tokio-rustls = "0.13.1"
 url = "2.1.1"
 utime = "0.2.1"
 webpki = "0.21.2"
